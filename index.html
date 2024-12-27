@@ -25,7 +25,7 @@
     placeholder="Enter Student Name"
     />
 
-    <button type="button" id="add-student">Add Student</button>
+    <button type="button" id="add-student" onclick="addStudent()">Add Student</button>
     <button type="button" onclick=" laodStudents()">Load Student</button>
     
 
@@ -53,9 +53,14 @@
 
         }
 
-        function addstudent(){
+        function addStudent(){
             const studentInput = document.getElementById("student-name")
             students.push(studentInput.value)
+
+            studentInput.value = ""
+            alert("student added sucessfully")
+
+            laodStudents()
         }
 
             
