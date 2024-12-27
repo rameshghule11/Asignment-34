@@ -25,7 +25,9 @@
     placeholder="Enter Student Name"
     />
 
-    <button>Add Student</button>
+    <button type="button" id="add-student">Add Student</button>
+    <button type="button" onclick=" laodStudents()">Load Student</button>
+    
 
 
     <div id="students-container"></div>
@@ -38,10 +40,24 @@
             "tanu"
         ]
 
-        const studentsConatiner = document.getElementById("students-container")
+        
+        function laodStudents(){
+            const studentsConatiner = document.getElementById("students-container")
+
+
+            studentsConatiner.innerHTML =""
+
         for (let i=0; i<students.length; i++){
             studentsConatiner.innerHTML += `<div class='student-card'>${i+1} ${students[i]}</div>`
         }
+
+        }
+
+        function addstudent(){
+            const studentInput = document.getElementById("student-name")
+            students.push(studentInput.value)
+        }
+
             
     </script>
 </body>
