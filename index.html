@@ -6,6 +6,24 @@
     <title>Assignment-34</title>
 </head>
 <body>
-   hello 
+
+    <h1>Students</h1>
+
+    <div id="students-container"></div>
+    
+    <script>
+        const students = [
+            "banti",
+            "ash",
+            "paro",
+            "tanu"
+        ]
+
+        const studentsConatiner = document.getElementById("students-container")
+        for (let i=0; i<students.length; i++){
+            studentsConatiner.innerHTML += `<div class="student-card">${i+1} ${students[i]}</div>`
+        }
+            
+    </script>
 </body>
 </html>
