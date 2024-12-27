@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-34</title>
+
+    <style> 
+        .student-card{
+            border:1px solid black;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 20px;
+            background-color: antiquewhite;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Students</h1>
+
+    <input 
+    type="text" 
+    id="student-name"
+    placeholder="Enter Student Name"
+    />
+
+    <button>Add Student</button>
+
 
     <div id="students-container"></div>
     
@@ -21,7 +40,7 @@
 
         const studentsConatiner = document.getElementById("students-container")
         for (let i=0; i<students.length; i++){
-            studentsConatiner.innerHTML += `<div class="student-card">${i+1} ${students[i]}</div>`
+            studentsConatiner.innerHTML += `<div class='student-card'>${i+1} ${students[i]}</div>`
         }
             
     </script>
